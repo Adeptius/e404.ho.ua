@@ -1,0 +1,29 @@
+/*--------------------------------Стили параллакса------------------------------------ */
+* 			   {margin: 0;padding: 0;}
+a, img         {border: 0;}
+p              {margin: 1em 0 0.8em;}
+.clear         {clear: both;}
+#main .outer   {background: transparent url('../img/vines-mid.png') 70% 0 repeat-x;}
+#main .inner   {margin-top:-20px; background: transparent url('../img/vines-front.png') 300% 0 repeat-x;}
+#main .content {width: 838px; margin: 0 auto; padding: 80px 0;}
+
+
+/*------------------------------------Мои Стили--------------------------------------- */
+.Оглавление    {font-size: 50px}
+.Раздел        {color: #FF0; font-size: 35px}
+.Программа     {color: #FF0; font-size: 25px}
+.Линк          {color: #0F0}
+a:hover        {color: #F00}
+a              {color: #0F0}	
+::selection    {background: #3C0;}
+body           {background: #6e9b68 url('../img/body.gif') -10% 0 repeat-x;
+				color: #333; 
+				line-height: 1.3;
+				background-repeat: repeat;
+				background-attachment:fixed;
+				background-position:  top ;
+				width: auto;
+				background-color: #000;
+				color: #FFF;
+				font-size: 18px;
+				font-family:Calibri}
