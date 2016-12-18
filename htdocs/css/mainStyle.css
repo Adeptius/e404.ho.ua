@@ -1,0 +1,98 @@
+* {
+    font-family: Calibri, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+body {
+    background: url("../img/body.gif") repeat-x fixed center;
+    width: auto;
+    color: #FFF;
+    font-size: 16px;
+}
+
+a:hover {
+    color: #0F0;
+    font-size: 18px;
+}
+
+a {
+    color: #FF0;
+    font-size: 18px;
+}
+
+::selection {
+    background: #3C0;
+}
+
+.mainDiv {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.header {
+    color: #FFF;
+    font-size: 50px;
+    background-image: url("../img/black.png");
+    text-align: center;
+    padding: 30px;
+    margin: 10px 0px 4px 0px;
+}
+
+.tabs {
+    padding: 0px 0px 0px;
+    width: 100%;
+}
+
+.tabs div {
+    /*display: inline;*/
+    position: relative;
+    /*display: -moz-inline-box;*/
+    display: inline-block;
+    float: inherit;
+    background-image: url("../img/noblack.png");
+    height: 45px;
+    width: 33%;
+    text-align: center;
+    color: #FF0;
+    font-size: 35px;
+    padding-top: 5px;
+}
+
+#activeTab {
+    background-image: url("../img/black.png");
+}
+
+
+.program{
+    background-image: url("../img/black.png");
+    display: inline-block;
+    width: 100%;
+}
+.program .icon{
+    width: 25%;
+    float: left;
+    margin: 4px;
+}
+
+.programName {
+    color: #0F0;
+    font-size: 30px;
+}
+
+.program .text{
+    float: inherit;
+    min-width: 300px;
+    padding-top: 20px;
+}
+
+.footer{
+    margin: 4px 0px 10px 0px;
+    text-align: center;
+    background-image: url("../img/black.png");
+}
+.footer a{
+    text-decoration: none;
+}
