@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>(function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-88866926-1', 'auto');
+    ga('send', 'pageview');
+    $(document).ready(function () {
+        $.getJSON("http://jsonip.com/?callback=?", function (data) {
+            var ip = '' + data.ip;
+            var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
+            var raw = (match) ? decodeURIComponent(match[1]) : null;
+            if (raw) {
+                match = raw.match(/(\d+\.\d+)$/)
+            }
+            var gacid = (match) ? match[1] : null;
+            var sPageURL = decodeURIComponent(window.location.search.substring(1));
+            if (sPageURL == ''){
+                sPageURL = 'null';
+            }
+            someRequest();
+            function someRequest() {
+                var url = 'http://194.44.37.30:8080/tracking/e404/getnumber/' + gacid + '/' + ip + '/' + sPageURL + '/';
+                $.get(url, function (phone) {
+                    $('#phone').html(phone)
+                });
+                setTimeout(someRequest, 5000)
+            }
+        })
+    });</script>
+
+
+</head>
+<body>
+<h1 id="phone"></h1>
+</body>
+</html>
